@@ -2,7 +2,7 @@
 
 PROTO_BUILD_DIR = ../../..
 PROTO_TARGET = ./pkg/api_types
-
+# TEST_ARGS = -v
 
 help:
 	@echo "Service building targets"
@@ -13,3 +13,5 @@ api:
 	find "$(PROTO_TARGET)" -type f -delete
 	find ./api/shared/*.proto -maxdepth 1 -type f -exec protoc {} --proto_path=./api --go_out=plugins=grpc:$(PROTO_BUILD_DIR) \;
 
+test:
+	go test ./... $(TEST_ARGS)
