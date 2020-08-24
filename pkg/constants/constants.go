@@ -13,4 +13,5 @@ const (
 	EMAIL_TYPE_PASSWORD_CHANGED   = "password-changed"
 	EMAIL_TYPE_ACCOUNT_ID_CHANGED = "account-id-changed"
 	EMAIL_TYPE_STUDY_REMINDER     = "study-reminder"
+	EMAIL_TYPE_ACCOUNT_DELETED    = "account-deleted"
 )
