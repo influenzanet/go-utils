@@ -8,6 +8,7 @@ const (
 
 const (
 	EMAIL_TYPE_REGISTRATION           = "registration"
+	EMAIL_TYPE_INVITATION             = "invitation"
 	EMAIL_TYPE_VERIFY_EMAIL           = "verify-email"
 	EMAIL_TYPE_AUTH_VERIFICATION_CODE = "verification-code"
 	EMAIL_TYPE_PASSWORD_RESET         = "password-reset"
