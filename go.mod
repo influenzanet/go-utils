@@ -1,9 +1,9 @@
 module github.com/influenzanet/go-utils
 
-go 1.14
+go 1.15
 
 require (
-	github.com/golang/protobuf v1.4.2
-	google.golang.org/grpc v1.31.0
-	google.golang.org/protobuf v1.25.0
+	github.com/golang/protobuf v1.5.2
+	google.golang.org/grpc v1.38.0
+	google.golang.org/protobuf v1.26.0
 )
