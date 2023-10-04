@@ -19,6 +19,7 @@ const (
 	EMAIL_TYPE_STUDY_REMINDER         = "study-reminder"
 	EMAIL_TYPE_NEWSLETTER             = "newsletter"
 	EMAIL_TYPE_ACCOUNT_DELETED        = "account-deleted"
+	EMAIL_TYPE_ACCOUNT_INACTIVITY     = "account-incativty"
 )
 
 const (
