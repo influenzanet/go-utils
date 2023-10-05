@@ -19,13 +19,15 @@ const (
 	EMAIL_TYPE_STUDY_REMINDER         = "study-reminder"
 	EMAIL_TYPE_NEWSLETTER             = "newsletter"
 	EMAIL_TYPE_ACCOUNT_DELETED        = "account-deleted"
+	EMAIL_TYPE_ACCOUNT_INACTIVITY     = "account-incativty"
 )
 
 const (
-	TOKEN_PURPOSE_INVITATION             = "invitation"
-	TOKEN_PURPOSE_PASSWORD_RESET         = "password-reset"
-	TOKEN_PURPOSE_CONTACT_VERIFICATION   = "contact-verification"
-	TOKEN_PURPOSE_SURVEY_LOGIN           = "survey-login"
-	TOKEN_PURPOSE_UNSUBSCRIBE_NEWSLETTER = "unsubscribe-newsletter"
-	TOKEN_PURPOSE_RESTORE_ACCOUNT_ID     = "restore_account_id"
+	TOKEN_PURPOSE_INVITATION                 = "invitation"
+	TOKEN_PURPOSE_PASSWORD_RESET             = "password-reset"
+	TOKEN_PURPOSE_CONTACT_VERIFICATION       = "contact-verification"
+	TOKEN_PURPOSE_SURVEY_LOGIN               = "survey-login"
+	TOKEN_PURPOSE_UNSUBSCRIBE_NEWSLETTER     = "unsubscribe-newsletter"
+	TOKEN_PURPOSE_RESTORE_ACCOUNT_ID         = "restore_account_id"
+	TOKEN_PURPOSE_INACTIVE_USER_NOTIFICATION = "inactive-user-notification"
 )
