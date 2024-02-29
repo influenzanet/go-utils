@@ -1,6 +1,8 @@
 package configs
 
 import (
+	"encoding/json"
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -36,4 +38,34 @@ func ParseEnvDuration(name string, defaultValue time.Duration, defaultUnit strin
 	}
 	Infof("%s : using value %s", name, d)
 	return d
+}
+
+// Duration type is a wrapper of time.Duration type with capability to be mashalled & unmarshalled from JSON
+type Duration struct {
+	time.Duration
+}
+
+func (d Duration) MarshalJSON() ([]byte, error) {
+	return json.Marshal(d.String())
+}
+
+func (d *Duration) UnmarshalJSON(b []byte) error {
+	var v interface{}
+	if err := json.Unmarshal(b, &v); err != nil {
+		return err
+	}
+	switch value := v.(type) {
+	case float64:
+		d.Duration = time.Duration(value)
+		return nil
+	case string:
+		var err error
+		d.Duration, err = time.ParseDuration(value)
+		if err != nil {
+			return err
+		}
+		return nil
+	default:
+		return errors.New("invalid duration value (expect float or golang time.Duration format)")
+	}
 }
